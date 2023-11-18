@@ -10,3 +10,20 @@ remove "main": "App.js", from package.json
 eslint
 bracket cololizer
 better Comment
+
+
+Eposide-04
+{
+ what is config driven UI?
+ we see the example
+ in delhi we have different offer
+ in banglore we have different offer 
+ and in other plase we have no offer 
+ and all theoffer is shown in crousel like in swiggy 
+ sp all the offer works we call it config driven UI
+
+ so we can say that in different place we have different data
+  so this happend from back end 
+
+
+}
