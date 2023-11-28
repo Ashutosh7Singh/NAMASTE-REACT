@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = () => {
   //Loacal State Variable-super powerful vairbale -it's a react variable
   const [listOfRestaurants, setlistOfRestaurants] = useState([]);
@@ -27,6 +28,13 @@ const Body = () => {
       json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+const onlineStatus = useOnlineStatus();
+if(onlineStatus === false)
+ return (
+
+  <h1>Looks like you're offLine!!please check your internet connection</h1>
+
+);
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
